@@ -33,3 +33,8 @@ One line of reasoning per decision. Newest at the bottom of each section.
 - **How I work:** WAI-ARIA APG tabs with 6 steps from Marc's confirmed working method, each paired with the related site role from his resume. Without JS all six steps show as a list.
 - **Mobile header:** below 900 px the nav sits behind a menu button, so the sticky header with the station readout stays one row.
 - **No dead controls without JS:** buttons that need JS carry `hidden data-js` and main.js reveals them. No external scripts; the only third-party request is Google Fonts CSS.
+
+## Plain-language pass (25 Sep 2026)
+- **Why:** Marc said parts of the site read as AI-made. Two reviews listed the tells: em dashes as separators, headings like "Project highlights" and "Skills and capabilities", padded resume tails ("to support safe and efficient site operations"), made-up drawing labels ("Schedule 02", "Long section 01", "Detail 1 · Scale NTS", "Drawn for"), 01–06 and C-01 codes, a "NOT TO SCALE" scale bar on every section, and the same facts repeated in two blocks.
+- **Changed:** copy reworded in plain first-person Australian English with the same facts; en dashes for date ranges; the role line uses the resume's pipe; the visa line uses a colon everywhere; section labels are now the chainage only; scale bars, reference codes and the Licences column (already in Key details) removed; the hero title block shows only real fields (Scale, Rev, Date); photo placeholders are a quiet line instead of dashed boxes; small labels are sentence case. The resume and its PDF use the same wording.
+- **Kept (Marc's requests):** moving contours, gradient wash, drawing plot-in, crosshair, station readout, tap marker, swipe carousel, theme reveal, pause button.
