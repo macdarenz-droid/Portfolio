@@ -22,3 +22,4 @@ Rules for every agent (Claude, GPT, Codex, …) working in this repo.
 - **Privacy.** This repo is public. Marc approved (25 Sep 2026) showing his email, phone number and visa line on the site. Never publish referee names or numbers, school IDs, assessor or classmate names, or any other personal documents.
 - **Accessible to everyone.** Target WCAG 2.2 AA: semantic HTML, keyboard access, visible focus, 4.5:1 text contrast, reduced-motion support, works at 320 px wide with no sideways scroll.
 - Research and design decisions live in `docs/RESEARCH.md` and `docs/DECISIONS.md` (one file each, kept current).
+- Whenever `assets/styles.css` or `assets/main.js` changes, raise the `?v=` number on its link in `index.html`, so browsers never pair new HTML with an old cached file.

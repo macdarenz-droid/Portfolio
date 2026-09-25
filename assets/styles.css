@@ -293,8 +293,17 @@ h4{font-weight:500;font-size:1.0625rem;line-height:1.35;letter-spacing:-.01em}
 
 /* ---------- Drawings: each sheet on a drafting mat; larger view in a dialog with JS ---------- */
 .plates{display:flex;flex-wrap:wrap;gap:16px}
-.shots{gap:12px}
-.shots .plate{flex:1 1 200px}
+/* Project card with its own site photos behind a see-through sheet. Scrim and text tones are set so every
+   line keeps 4.5:1 even over the photo's darkest (light theme) or brightest (dark theme) pixel. */
+.detail-photo{position:relative;isolation:isolate;overflow:hidden;--scrim:rgba(255,255,255,.68);--fg-2:#262626;--fg-3:#333333}
+.detail-bg{position:absolute;inset:0;z-index:-1;pointer-events:none;background:var(--paper-s)}
+.detail-bg span{position:absolute;inset:0;background:center 40%/cover no-repeat}
+.detail-bg .bg-1{background-image:url(photos/subdivision-site-1.jpg)}
+.detail-bg .bg-2{background-image:url(photos/subdivision-site-2.jpg);opacity:0;animation:bgx 18s ease-in-out infinite}
+.detail-bg::after{content:"";position:absolute;inset:0;background:var(--scrim)}
+.motion-off .detail-bg .bg-2{animation-play-state:paused}
+@keyframes bgx{0%,40%{opacity:0}50%,90%{opacity:1}100%{opacity:0}}
+.detail-b > p.bg-note{font-size:.8125rem;color:var(--fg-3)}
 .plate{--mp:12px;flex:1 1 100%;min-width:0;display:flex;flex-direction:column;border:1px solid var(--line);background:var(--paper)}
 /* Wide screens: the road section takes the full row; the other two share a row, sized so both images are the same height */
 @media (min-width:760px){
@@ -480,3 +489,6 @@ html.is-locked{overflow:hidden;scrollbar-gutter:stable}
 .caps > li.wide{grid-column:1/-1}
 .resume-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin-top:24px}
 .note a{display:inline-block;padding-block:4px;color:var(--ink);text-underline-offset:3px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .detail-photo{--scrim:rgba(5,5,6,.68);--fg-2:#d6d6d6;--fg-3:#cfcfcf}}
+:root[data-theme="dark"] .detail-photo{--scrim:rgba(5,5,6,.68);--fg-2:#d6d6d6;--fg-3:#cfcfcf}
+@media (prefers-reduced-motion:reduce){.detail-bg .bg-2{animation:none}}

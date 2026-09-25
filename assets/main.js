@@ -123,7 +123,7 @@
     function start() { if (running || paused || still() || d.hidden) return; if (heldAt) t0 += performance.now() - heldAt; heldAt = 0; running = true; rid = raf(loop); }
     function stop() { if (running) heldAt = performance.now(); running = false; W.cancelAnimationFrame(rid); }
     function redraw() { if (!running) { if (!heldAt) heldAt = performance.now(); frame(heldAt); } }
-    function setPaused(v) { paused = v; try { localStorage.setItem('mdm-motion', v ? 'off' : 'on'); } catch (err) {} if (v) stop(); else start(); }
+    function setPaused(v) { paused = v; root.classList.toggle('motion-off', v); try { localStorage.setItem('mdm-motion', v ? 'off' : 'on'); } catch (err) {} if (v) stop(); else start(); }
     function recolor(noDraw) {
       var st = getComputedStyle(root);
       col = st.getPropertyValue('--topo').trim() || col;
@@ -150,6 +150,7 @@
     onMQ(RM, function () { if (still()) stop(); else start(); });
     W.addEventListener('resize', debounce(function () { if (size()) redraw(); }, 160));
     size(); recolor(true);
+    root.classList.toggle('motion-off', paused);
     if (still() || paused) redraw(); else start();
     return { recolor: recolor, redraw: redraw, setPaused: setPaused, isPaused: function () { return paused; } };
   })();
@@ -157,7 +158,7 @@
   (function () { // WCAG 2.2.2: a persistent way to pause the moving background
     var mb = $('.motion-toggle');
     if (!mb) return;
-    if (!topo) { mb.hidden = true; return; }
+    if (!topo) { mb.hidden = true; root.classList.add('motion-off'); return; }
     function sync() { mb.hidden = still(); mb.setAttribute('aria-pressed', topo.isPaused() ? 'true' : 'false'); }
     mb.addEventListener('click', function () { topo.setPaused(!topo.isPaused()); sync(); say(topo.isPaused() ? 'Background motion paused' : 'Background motion playing'); });
     onMQ(RM, sync); sync();
@@ -511,7 +512,7 @@
     dlg.setAttribute('aria-labelledby', 'viewer-cap');
     dlg.innerHTML = '<div class="viewer-box"><div class="viewer-head">' +
       '<div class="plate-meta viewer-meta"><p class="plate-tool"></p><p class="label"></p></div><p class="viewer-cap" id="viewer-cap"></p>' +
-      '<button class="btn viewer-close" type="button"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 3.5l9 9M12.5 3.5l-9 9"/></svg><span>Close</span></button></div>' +
+      '<button class="btn viewer-close" type="button"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false"><path d="M3.5 3.5l9 9M12.5 3.5l-9 9"/></svg><span>Close</span></button></div>' +
       '<div class="viewer-stage"><img class="viewer-img" alt="" decoding="async"></div></div>';
     d.body.appendChild(dlg);
     var tool = $('.plate-tool', dlg), src = $('.label', dlg), cap = $('.viewer-cap', dlg), img = $('.viewer-img', dlg), shut = $('.viewer-close', dlg);
