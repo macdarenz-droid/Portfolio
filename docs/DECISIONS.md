@@ -39,3 +39,9 @@ One line of reasoning per decision. Newest at the bottom of each section.
 - **Changed:** copy reworded in plain first-person Australian English with the same facts; en dashes for date ranges; the role line uses the resume's pipe; the visa line uses a colon everywhere; section labels are now the chainage only; scale bars, reference codes and the Licences column (already in Key details) removed; the hero title block shows only real fields (Scale, Rev, Date); photo placeholders are a quiet line instead of dashed boxes; small labels are sentence case. The resume and its PDF use the same wording.
 - **Kept (Marc's requests):** moving contours, gradient wash, drawing plot-in, crosshair, station readout, tap marker, swipe carousel, theme reveal, pause button.
 - **Marc's call (25 Sep 2026):** after the review he chose to keep all effects exactly as they are: crosshair and its readout, header chainage readout, see-through sheet with moving contours, boxed grids, and How I work as tabs. Future reviews should not propose removing them.
+
+## Logic pass (25 Sep 2026)
+- **Rule:** never pair a coursework method, standard or skill with a site job, and always say where site work happened. Marc caught "Standards" listing his Philippines job; a two-reviewer audit found the same pattern elsewhere.
+- **How I work** is coursework only (Advanced Diploma, Feb 2024 – Feb 2026), matching the resume. Site work lives in Experience and Projects.
+- Site experience is labelled "in the Philippines" in the search and share text; the hero names both qualifications with country and year; Key details lists education newest first with country and years; the Experience intro covers all three roles.
+- Wording no longer overclaims: "to help the site run safely" (purpose, not result), "applying Australian Standards" (not "to" them), "site reports" (not "the"), "Main topics" (not one project's "Scope"); the coursework card is not called a "project" in the carousel controls.
