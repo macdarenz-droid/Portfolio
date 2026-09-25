@@ -297,9 +297,14 @@ h4{font-weight:500;font-size:1.0625rem;line-height:1.35;letter-spacing:-.01em}
    line keeps 4.5:1 even over the photo's darkest (light theme) or brightest (dark theme) pixel. */
 .detail-photo{position:relative;isolation:isolate;overflow:hidden;--scrim:rgba(255,255,255,.68);--fg-2:#262626;--fg-3:#333333}
 .detail-bg{position:absolute;inset:0;z-index:-1;pointer-events:none;background:var(--paper-s)}
-.detail-bg span{position:absolute;inset:0;background:center 40%/cover no-repeat}
-.detail-bg .bg-1{background-image:url(photos/subdivision-site-1.jpg)}
-.detail-bg .bg-2{background-image:url(photos/subdivision-site-2.jpg);opacity:0;animation:bgx 18s ease-in-out infinite}
+/* Each photo is shown whole ("fit") over a blurred copy of itself that fills the rest of the card ("fill"). */
+.detail-bg .bg{position:absolute;inset:0;overflow:hidden}
+.detail-bg .bg i{position:absolute;inset:0;background-repeat:no-repeat;background-position:center}
+.detail-bg .fill{inset:-32px;background-size:cover;filter:blur(20px)}
+.detail-bg .fit{background-size:contain}
+.detail-bg .bg-1 i{background-image:url(photos/subdivision-site-1.jpg)}
+.detail-bg .bg-2 i{background-image:url(photos/subdivision-site-2.jpg)}
+.detail-bg .bg-2{opacity:0;animation:bgx 18s ease-in-out infinite}
 .detail-bg::after{content:"";position:absolute;inset:0;background:var(--scrim)}
 .motion-off .detail-bg .bg-2{animation-play-state:paused}
 @keyframes bgx{0%,40%{opacity:0}50%,90%{opacity:1}100%{opacity:0}}
