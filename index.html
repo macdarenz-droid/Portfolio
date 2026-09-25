@@ -35,8 +35,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/styles.css">
-<script src="assets/main.js" defer></script>
+<link rel="stylesheet" href="assets/styles.css?v=8">
+<script src="assets/main.js?v=8" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -341,7 +341,8 @@
             </div>
           </article>
 
-          <article class="detail" role="group" aria-roledescription="slide" aria-label="2 of 3">
+          <article class="detail detail-photo" role="group" aria-roledescription="slide" aria-label="2 of 3">
+            <div class="detail-bg" aria-hidden="true"><span class="bg-1"></span><span class="bg-2"></span></div>
             <div class="detail-a">
               <div class="detail-head">
                 <svg class="bubble" viewBox="0 0 52 52" aria-hidden="true" focusable="false"><circle class="b-ln" cx="26" cy="26" r="24"/><text x="26" y="26" dy=".36em" text-anchor="middle">2</text></svg>
@@ -356,28 +357,7 @@
             </div>
             <div class="detail-b">
               <p>I helped with site inspections, daily coordination and quality checks, tracked procurement and materials, and prepared site reports and material records.</p>
-              <div class="plates shots">
-              <figure class="plate">
-                <a class="plate-view" href="assets/photos/subdivision-site-1.jpg">
-                  <img src="assets/photos/subdivision-site-1.jpg" width="1080" height="1080" loading="lazy" decoding="async" alt="Two-storey house with a carport, where a person in dark work clothes stands beside a red van, and scaffolding along the side of the house.">
-                  <span class="plate-zoom" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M9.5 2.5h4v4M13.5 2.5L9 7M6.5 13.5h-4v-4M2.5 13.5L7 9"/></svg></span>
-                </a>
-                <figcaption class="plate-cap">
-                  <div class="plate-meta"><p class="plate-tool">Site photo</p><p class="label">Philippines, 2019</p></div>
-                  <p class="plate-text">A house in the subdivision, with scaffolding still up along the side.</p>
-                </figcaption>
-              </figure>
-              <figure class="plate">
-                <a class="plate-view" href="assets/photos/subdivision-site-2.jpg">
-                  <img src="assets/photos/subdivision-site-2.jpg" width="1080" height="1078" loading="lazy" decoding="async" alt="Two-storey house with brown cladding and large windows, a ladder against the upper wall and scaffolding at the side, on a sloping block.">
-                  <span class="plate-zoom" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M9.5 2.5h4v4M13.5 2.5L9 7M6.5 13.5h-4v-4M2.5 13.5L7 9"/></svg></span>
-                </a>
-                <figcaption class="plate-cap">
-                  <div class="plate-meta"><p class="plate-tool">Site photo</p><p class="label">Philippines, 2019</p></div>
-                  <p class="plate-text">Another house in the subdivision during finishing works.</p>
-                </figcaption>
-              </figure>
-              </div>
+              <p class="label bg-note">Background photos: houses in the subdivision during finishing works, Philippines, 2019.</p>
             </div>
           </article>
 
@@ -418,7 +398,7 @@
         <figure class="plate plate-wide">
           <a class="plate-view" href="assets/drawings/road-cross-section.svg">
             <img src="assets/drawings/road-cross-section.svg" width="1600" height="1000" loading="lazy" decoding="async" alt="Typical road cross-section: a crowned two-lane carriageway with 3500 mm lanes, 1500 mm sealed shoulders, kerb and channel and subsoil drains each side, with legend, notes and title block.">
-            <span class="plate-zoom" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M9.5 2.5h4v4M13.5 2.5L9 7M6.5 13.5h-4v-4M2.5 13.5L7 9"/></svg></span>
+            <span class="plate-zoom" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14" focusable="false"><path d="M9.5 2.5h4v4M13.5 2.5L9 7M6.5 13.5h-4v-4M2.5 13.5L7 9"/></svg></span>
           </a>
           <figcaption class="plate-cap">
             <div class="plate-meta"><p class="plate-tool">AutoCAD, redrawn</p><p class="label">Advanced Diploma coursework</p></div>
@@ -428,7 +408,7 @@
         <figure class="plate plate-bridge">
           <a class="plate-view" href="assets/drawings/truss-bridge-revit.png">
             <img src="assets/drawings/truss-bridge-revit.png" width="1115" height="580" loading="lazy" decoding="async" alt="3D view of a steel Warren truss pedestrian bridge with two trusses on a concrete deck.">
-            <span class="plate-zoom" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M9.5 2.5h4v4M13.5 2.5L9 7M6.5 13.5h-4v-4M2.5 13.5L7 9"/></svg></span>
+            <span class="plate-zoom" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14" focusable="false"><path d="M9.5 2.5h4v4M13.5 2.5L9 7M6.5 13.5h-4v-4M2.5 13.5L7 9"/></svg></span>
           </a>
           <figcaption class="plate-cap">
             <div class="plate-meta"><p class="plate-tool">Revit</p><p class="label">Advanced Diploma coursework</p></div>
@@ -438,7 +418,7 @@
         <figure class="plate plate-cad">
           <a class="plate-view" href="assets/drawings/footing-3d.png">
             <img src="assets/drawings/footing-3d.png" width="552" height="502" loading="lazy" decoding="async" alt="3D view of a square concrete footing with a column rising from its centre.">
-            <span class="plate-zoom" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M9.5 2.5h4v4M13.5 2.5L9 7M6.5 13.5h-4v-4M2.5 13.5L7 9"/></svg></span>
+            <span class="plate-zoom" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14" focusable="false"><path d="M9.5 2.5h4v4M13.5 2.5L9 7M6.5 13.5h-4v-4M2.5 13.5L7 9"/></svg></span>
           </a>
           <figcaption class="plate-cap">
             <div class="plate-meta"><p class="plate-tool">AutoCAD 3D</p><p class="label">Advanced Diploma coursework</p></div>
