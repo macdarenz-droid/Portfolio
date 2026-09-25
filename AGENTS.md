@@ -19,6 +19,6 @@ Rules for every agent (Claude, GPT, Codex, …) working in this repo.
 ## This project: Marc's portfolio site
 - Audience: employers and recruiters hiring junior civil engineers in Australia.
 - **Truth only.** Every claim on the site must come from Marc's resume or from facts Marc has confirmed in writing. No invented numbers, projects, quotes, logos or skills. Missing content is a visible placeholder until Marc supplies it.
-- **Privacy.** This repo is public. Don't commit the resume PDF, phone number, visa details or other personal data until Marc has confirmed they may be public.
+- **Privacy.** This repo is public. Marc approved (25 Sep 2026) showing his email, phone number and visa line on the site. Never publish referee names or numbers, school IDs, assessor or classmate names, or any other personal documents.
 - **Accessible to everyone.** Target WCAG 2.2 AA: semantic HTML, keyboard access, visible focus, 4.5:1 text contrast, reduced-motion support, works at 320 px wide with no sideways scroll.
 - Research and design decisions live in `docs/RESEARCH.md` and `docs/DECISIONS.md` (one file each, kept current).
