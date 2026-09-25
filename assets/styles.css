@@ -302,8 +302,12 @@ h4{font-weight:500;font-size:1.0625rem;line-height:1.35;letter-spacing:-.01em}
 .detail-bg .bg i{position:absolute;inset:0;background-repeat:no-repeat;background-position:center}
 .detail-bg .fill{inset:-32px;background-size:cover;filter:blur(20px)}
 .detail-bg .fit{background-size:contain}
-.detail-bg .bg-1 i{background-image:url(photos/subdivision-site-1.jpg)}
-.detail-bg .bg-2 i{background-image:url(photos/subdivision-site-2.jpg)}
+.detail-bg .img-hall-1 i{background-image:url(photos/stock-renovation-1.jpg)}
+.detail-bg .img-hall-2 i{background-image:url(photos/stock-renovation-2.jpg)}
+.detail-bg .img-sub-1 i{background-image:url(photos/subdivision-site-1.jpg)}
+.detail-bg .img-sub-2 i{background-image:url(photos/subdivision-site-2.jpg)}
+.detail-bg .img-cw-1 i{background-image:url(drawings/truss-bridge-revit.png)}
+.detail-bg .img-cw-2 i{background-image:url(drawings/footing-3d.png)}
 .detail-bg .bg-2{opacity:0;animation:bgx 18s ease-in-out infinite}
 .detail-bg::after{content:"";position:absolute;inset:0;background:var(--scrim)}
 .motion-off .detail-bg .bg-2{animation-play-state:paused}
