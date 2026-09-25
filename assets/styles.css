@@ -293,6 +293,8 @@ h4{font-weight:500;font-size:1.0625rem;line-height:1.35;letter-spacing:-.01em}
 
 /* ---------- Drawings: each sheet on a drafting mat; larger view in a dialog with JS ---------- */
 .plates{display:flex;flex-wrap:wrap;gap:16px}
+.shots{gap:12px}
+.shots .plate{flex:1 1 200px}
 .plate{--mp:12px;flex:1 1 100%;min-width:0;display:flex;flex-direction:column;border:1px solid var(--line);background:var(--paper)}
 /* Wide screens: the road section takes the full row; the other two share a row, sized so both images are the same height */
 @media (min-width:760px){
@@ -337,8 +339,13 @@ html.is-locked{overflow:hidden;scrollbar-gutter:stable}
   .viewer{width:100%;border-inline:0}
   .viewer-stage{padding:0}
 }
+/* Short screens too narrow for the side caption (such as 400% zoom): keep room for the drawing and let the dialog scroll */
+@media (max-height:559.98px) and (min-aspect-ratio:1/1) and (max-aspect-ratio:4/3){
+  .viewer{overflow-y:auto}
+  .viewer-box{height:auto;min-height:100%;grid-template-rows:auto minmax(9rem,1fr)}
+}
 @media (max-height:559.98px) and (min-aspect-ratio:4/3){
-  .viewer-box{grid-template-areas:"stage head";grid-template-rows:minmax(0,1fr);grid-template-columns:minmax(0,1fr) minmax(200px,30%)}
+  .viewer-box{height:100%;grid-template-areas:"stage head";grid-template-rows:minmax(0,1fr);grid-template-columns:minmax(0,1fr) minmax(200px,30%)}
   .viewer-head{grid-template-columns:minmax(0,1fr);grid-template-areas:"close" "meta" "cap";align-content:start;overflow-y:auto;border-bottom:0;border-left:1px solid var(--line)}
   .viewer-close{justify-self:end}
 }

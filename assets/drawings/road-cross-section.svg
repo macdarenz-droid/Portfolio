@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="xs-title xs-desc" font-family="Arial, Helvetica, sans-serif">
 <title id="xs-title">Typical road cross-section, urban road pavement upgrade (coursework drawing, revision B)</title>
-<desc id="xs-desc">Road cross-section drawing, not to scale. A crowned two-lane road with one 3500 mm traffic lane each way and a 1500 mm sealed shoulder each side, 10000 mm overall, with the centreline at the crown. Crossfall is 2.5% on the traffic lanes and 4% on the shoulders, falling outward. The pavement is asphalt surfacing (PMA) on a granular base over the subgrade. Each side has kerb and channel, a subsoil drain to EDCM 202b at the back of kerb (a slotted pipe in filter material) and the verge beyond. The sheet has a legend, six notes and a title block: Typical cross-section, scale NTS, dimensions in mm, revision B, September 2026.</desc>
+<desc id="xs-desc">Road cross-section drawing, not to scale. A crowned two-lane road with one 3500 mm traffic lane each way and a 1500 mm sealed shoulder each side, 10000 mm overall, with the centreline at the crown. Crossfall is 2.5% on the traffic lanes and 4% on the shoulders, falling outward. The pavement is asphalt surfacing (PMA) on a granular base over the subgrade. Each side has kerb and channel, a subsoil drain to EDCM 202b at the back of kerb (a pipe in filter material) and the verge beyond. The sheet has a legend, six notes and a title block: Typical cross-section, scale NTS, dimensions in mm, revision B, September 2026.</desc>
 <defs>
 <pattern id="h-surf" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#c9c9c9"/><circle cx="1.5" cy="1.5" r="0.8" fill="#222"/><circle cx="4.5" cy="4.2" r="0.8" fill="#222"/></pattern>
 <pattern id="h-base" width="13" height="13" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="13" height="13" fill="#fff"/><line x1="0" y1="0" x2="0" y2="13" stroke="#333" stroke-width="1.6"/></pattern>
@@ -18,12 +18,12 @@
 <polygon points="1392,316 1550,340 1550,435 1392,435" fill="#fff" stroke-width="1.4"/>
 <polygon points="1334,306 1392,306 1550,330 1550,340 1392,316 1334,316" fill="#fff" stroke-width="2"/>
 <rect x="1334" y="316" width="58" height="169" fill="url(#h-filt)" stroke-width="1.8"/>
-<circle cx="1363" cy="462" r="12" fill="#fff" stroke-width="2.2" stroke-dasharray="6 3"/>
+<circle cx="1363" cy="462" r="12" fill="#fff" stroke-width="2.2"/>
 <polygon points="320,334 292,338 286,306 266,306 266,391 320,391" fill="#fff" stroke-width="2.2"/>
 <polygon points="208,316 50,340 50,435 208,435" fill="#fff" stroke-width="1.4"/>
 <polygon points="266,306 208,306 50,330 50,340 208,316 266,316" fill="#fff" stroke-width="2"/>
 <rect x="208" y="316" width="58" height="169" fill="url(#h-filt)" stroke-width="1.8"/>
-<circle cx="237" cy="462" r="12" fill="#fff" stroke-width="2.2" stroke-dasharray="6 3"/>
+<circle cx="237" cy="462" r="12" fill="#fff" stroke-width="2.2"/>
 <polyline points="320,334 464,320 800,300 1136,320 1280,334" fill="none" stroke-width="2.6"/>
 </g>
 <g id="centreline">
@@ -105,8 +105,8 @@
 <rect x="50" y="798" width="60" height="34" fill="url(#h-sub)" stroke="#000" stroke-width="1.2"/>
 <text x="126" y="821" font-size="20">Subgrade</text>
 <rect x="50" y="872" width="60" height="34" fill="url(#h-filt)" stroke="#000" stroke-width="1.2"/>
-<circle cx="80" cy="889" r="10" fill="#fff" stroke="#000" stroke-width="2" stroke-dasharray="5 2.5"/>
-<text x="126" y="895" font-size="20">Subsoil drain: slotted</text>
+<circle cx="80" cy="889" r="10" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="126" y="895" font-size="20">Subsoil drain:</text>
 <text x="126" y="920" font-size="20">pipe in filter material</text>
 </g>
 <g id="notes" font-size="20">
@@ -142,9 +142,9 @@
 <line x1="1070" y1="648" x2="1570" y2="648" stroke="#000" stroke-width="1"/>
 <text x="1082" y="672">B</text>
 <text x="1138" y="672">Sep 2026</text>
-<text x="1250" y="672">Redrawn: title block, crossfall</text>
-<text x="1250" y="696">and mm dimensions added,</text>
-<text x="1250" y="720">notes corrected.</text>
+<text x="1250" y="672">Redrawn: title block, CL,</text>
+<text x="1250" y="696">crossfall and mm dims added,</text>
+<text x="1250" y="720">conduit removed, notes fixed.</text>
 <line x1="1070" y1="730" x2="1570" y2="730" stroke="#000" stroke-width="1.6"/>
 <line x1="1128" y1="580" x2="1128" y2="730" stroke="#000" stroke-width="1"/>
 <line x1="1240" y1="580" x2="1240" y2="730" stroke="#000" stroke-width="1"/>

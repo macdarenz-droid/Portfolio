@@ -13,7 +13,7 @@ One line of reasoning per decision. Newest at the bottom of each section.
 
 ## Privacy
 - The repo is public. On 25 Sep 2026 Marc approved showing his email, phone number and visa line (Subclass 485, full working rights until December 2027) on the site.
-- Design prototypes containing personal details are kept in private Claude artifacts, not in this repo.
+- Design prototypes containing personal details are kept in private preview pages, not in this repo.
 - Referee names and phone numbers are never published. The site says "References available on request".
 
 ## Build and hosting
@@ -37,7 +37,7 @@ One line of reasoning per decision. Newest at the bottom of each section.
 - **No dead controls without JS:** buttons that need JS carry `hidden data-js` and main.js reveals them. No external scripts; the only third-party request is Google Fonts CSS.
 
 ## Plain-language pass (25 Sep 2026)
-- **Why:** Marc said parts of the site read as AI-made. Two reviews listed the tells: em dashes as separators, headings like "Project highlights" and "Skills and capabilities", padded resume tails ("to support safe and efficient site operations"), made-up drawing labels ("Schedule 02", "Long section 01", "Detail 1 · Scale NTS", "Drawn for"), 01–06 and C-01 codes, a "NOT TO SCALE" scale bar on every section, and the same facts repeated in two blocks.
+- **Why:** Marc said parts of the site read as generic and template-like. Two reviews listed the tells: em dashes as separators, headings like "Project highlights" and "Skills and capabilities", padded resume tails ("to support safe and efficient site operations"), made-up drawing labels ("Schedule 02", "Long section 01", "Detail 1 · Scale NTS", "Drawn for"), 01–06 and C-01 codes, a "NOT TO SCALE" scale bar on every section, and the same facts repeated in two blocks.
 - **Changed:** copy reworded in plain first-person Australian English with the same facts; en dashes for date ranges; the role line uses the resume's pipe; the visa line uses a colon everywhere; section labels are now the chainage only; scale bars, reference codes and the Licences column (already in Key details) removed; the hero title block shows only real fields (Scale, Rev, Date); photo placeholders are a quiet line instead of dashed boxes; small labels are sentence case. The resume and its PDF use the same wording.
 - **Kept (Marc's requests):** moving contours, gradient wash, drawing plot-in, crosshair, station readout, tap marker, swipe carousel, theme reveal, pause button.
 - **Marc's call (25 Sep 2026):** after the review he chose to keep all effects exactly as they are: crosshair and its readout, header chainage readout, see-through sheet with moving contours, boxed grids, and How I work as tabs. Future reviews should not propose removing them.
@@ -51,5 +51,11 @@ One line of reasoning per decision. Newest at the bottom of each section.
 ## Drawings section (25 Sep 2026)
 - **Placement:** after Projects and before How I work, in the nav and the phone menu. It is CH 0+400, so How I work, Skills, Education, Strengths and Contact each moved up one station (now 0+500 to 0+900) and the header readout still climbs steadily down the page.
 - **Layout:** each drawing sits on its own framed sheet on a faint drafting grid, the same in light and dark mode (white sheets stay white, the AutoCAD screen stays dark). The road section takes the full row; from 760 px wide the bridge and footing share a row, sized so both images are the same height. One column on phones.
-- **Larger view:** without JS each drawing is a plain link to its file. With JS it opens in a native modal dialog named by its caption, with a 44 px Close button, Esc, click outside to close, focus back on the drawing and page scroll locked. The drawing fills the space under the caption (beside it on short landscape screens, wrapped to its size on portrait screens); the two screenshots stop at 1.5 times their size so they stay sharp. A short fade and rise plays only when reduced motion is off.
+- **Larger view:** without JS each drawing is a plain link to its file. With JS it opens in a native modal dialog named by its caption, with a 44 px Close button, Esc, click outside to close, focus back on the drawing and page scroll locked. The drawing fills the space under the caption (beside it on short landscape screens, wrapped to its size on portrait screens; on short screens too narrow for either, such as 400% zoom, it keeps at least 9rem for the drawing and the dialog scrolls); the two screenshots stop at 1.5 times their size so they stay sharp. A short fade and rise plays only when reduced motion is off.
 - **Header:** from 900 to 1023 px wide the theme button shows only its icon, as it does on phones, so the six nav links stay on one row.
+
+## Photos and approved lines (25 Sep 2026)
+- **Site photos:** Marc supplied two photos from his Field Engineer role at Grand Travaux (posted November 2019, inside the role's dates). They are cropped from his own social media posts to the photo only, the vehicle number plate is pixelated, and they are re-encoded without EXIF data. They sit on the subdivision card in Projects and open in the same larger view as the drawings. The person in the first photo is described neutrally in the alt text.
+- **Community hall card:** Marc has no photos of the renovation and asked for no placeholder. The card uses two more facts from his resume instead (escalating issues, keeping the client and stakeholders updated). No stock or generic images, because they would not show his work.
+- **Approved lines:** seven lines from the private coursework review, approved by Marc in writing, are used word for word in How I work (brief and scope, site data, options, calculations, risk and review) and the Drawings intro. "At least three options" became "more than one option", which matches every piece of his work.
+- **Cross-section revision B** records: title block, centreline, crossfall and mm dimensions added, service conduit removed, notes corrected. The Revit image keeps its "Level 1 4000" tag, because removing it would mean editing the model picture.
