@@ -501,5 +501,54 @@
     $$('.band').forEach(function (b) { io.observe(b); });
   }
 
+  /* ---------- 12. Drawings: larger view in a modal dialog (without JS each link opens the file) ---------- */
+  (function () {
+    var links = $$('.plate-view');
+    if (!links.length) return;
+    var dlg = d.createElement('dialog');
+    if (typeof dlg.showModal !== 'function') return;
+    dlg.className = 'viewer';
+    dlg.setAttribute('aria-labelledby', 'viewer-cap');
+    dlg.innerHTML = '<div class="viewer-box"><div class="viewer-head">' +
+      '<div class="plate-meta viewer-meta"><p class="plate-tool"></p><p class="label"></p></div><p class="viewer-cap" id="viewer-cap"></p>' +
+      '<button class="btn viewer-close" type="button"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 3.5l9 9M12.5 3.5l-9 9"/></svg><span>Close</span></button></div>' +
+      '<div class="viewer-stage"><img class="viewer-img" alt="" decoding="async"></div></div>';
+    d.body.appendChild(dlg);
+    var tool = $('.plate-tool', dlg), src = $('.label', dlg), cap = $('.viewer-cap', dlg), img = $('.viewer-img', dlg), shut = $('.viewer-close', dlg);
+    var from = null, downOut = false;
+    function txt(el, sel) { var n = $(sel, el); return n ? n.textContent.trim() : ''; }
+    function show(a) {
+      if (dlg.open) return;
+      var fig = a.closest('figure'), th = $('img', a), w = +th.getAttribute('width'), h = +th.getAttribute('height');
+      var vec = /\.svg$/i.test(a.getAttribute('href'));
+      tool.textContent = txt(fig, '.plate-tool'); src.textContent = txt(fig, '.plate-meta .label'); cap.textContent = txt(fig, '.plate-text');
+      img.width = w; img.height = h; img.alt = th.alt; img.src = a.getAttribute('href');
+      // Screenshots stop at 1.5x their own size so they stay sharp; the vector drawing fills the view.
+      img.style.maxWidth = vec ? '' : Math.round(w * 1.5) + 'px';
+      img.style.maxHeight = vec ? '' : Math.round(h * 1.5) + 'px';
+      dlg.classList.toggle('is-cad', fig.classList.contains('plate-cad'));
+      from = a;
+      root.classList.add('is-locked');
+      dlg.showModal();
+      shut.focus();
+    }
+    links.forEach(function (a) {
+      a.setAttribute('aria-haspopup', 'dialog');
+      a.addEventListener('click', function (ev) {
+        if (ev.button || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey) return; // new tab or window: open the file
+        ev.preventDefault(); show(a);
+      });
+    });
+    shut.addEventListener('click', function () { dlg.close(); });
+    // A click that starts and ends on the dimmed backdrop closes the view (Esc is handled by the dialog itself).
+    dlg.addEventListener('pointerdown', function (ev) { downOut = ev.target === dlg; });
+    dlg.addEventListener('click', function (ev) { if (downOut && ev.target === dlg) dlg.close(); downOut = false; });
+    dlg.addEventListener('close', function () {
+      root.classList.remove('is-locked');
+      img.removeAttribute('src');
+      if (from) { from.focus(); from = null; }
+    });
+  })();
+
   measure();
 })();

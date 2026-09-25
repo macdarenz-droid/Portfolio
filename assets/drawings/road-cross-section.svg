@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="xs-title xs-desc" font-family="Arial, Helvetica, sans-serif">
+<title id="xs-title">Typical road cross-section, urban road pavement upgrade (coursework drawing, revision B)</title>
+<desc id="xs-desc">Road cross-section drawing, not to scale. A crowned two-lane road with one 3500 mm traffic lane each way and a 1500 mm sealed shoulder each side, 10000 mm overall, with the centreline at the crown. Crossfall is 2.5% on the traffic lanes and 4% on the shoulders, falling outward. The pavement is asphalt surfacing (PMA) on a granular base over the subgrade. Each side has kerb and channel, a subsoil drain to EDCM 202b at the back of kerb (a pipe in filter material) and the verge beyond. The sheet has a legend, six notes and a title block: Typical cross-section, scale NTS, dimensions in mm, revision B, September 2026.</desc>
+<defs>
+<pattern id="h-surf" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#c9c9c9"/><circle cx="1.5" cy="1.5" r="0.8" fill="#222"/><circle cx="4.5" cy="4.2" r="0.8" fill="#222"/></pattern>
+<pattern id="h-base" width="13" height="13" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="13" height="13" fill="#fff"/><line x1="0" y1="0" x2="0" y2="13" stroke="#333" stroke-width="1.6"/></pattern>
+<pattern id="h-sub" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width="16" height="16" fill="#fff"/><line x1="0" y1="0" x2="0" y2="16" stroke="#333" stroke-width="1.4"/><line x1="8" y1="4" x2="8" y2="11" stroke="#333" stroke-width="1.4"/></pattern>
+<pattern id="h-filt" width="22" height="22" patternUnits="userSpaceOnUse"><rect width="22" height="22" fill="#fff"/><g fill="none" stroke="#333" stroke-width="1"><circle cx="5" cy="5" r="2.6"/><circle cx="15.5" cy="4" r="2"/><circle cx="11" cy="12" r="2.8"/><circle cx="3.5" cy="16" r="2.1"/><circle cx="18" cy="17.5" r="2.4"/></g><g fill="#333"><circle cx="9" cy="3" r="0.9"/><circle cx="19" cy="10" r="0.9"/><circle cx="8" cy="19.5" r="0.9"/><circle cx="1.5" cy="10" r="0.9"/></g></pattern>
+</defs>
+<rect width="1600" height="1000" fill="#fff"/>
+<rect x="10" y="10" width="1580" height="980" fill="none" stroke="#000" stroke-width="1.5"/>
+<g id="drawing" transform="translate(0,-10)">
+<g id="section" stroke="#000" stroke-linejoin="round">
+<polygon points="266,391 320,391 464,377 800,357 1136,377 1280,391 1334,391 1334,435 1280,435 1136,421 800,401 464,421 320,435 266,435" fill="url(#h-sub)" stroke-width="1.4"/>
+<polygon points="320,345 464,331 800,311 1136,331 1280,345 1280,391 1136,377 800,357 464,377 320,391" fill="url(#h-base)" stroke-width="1.4"/>
+<polygon points="320,334 464,320 800,300 1136,320 1280,334 1280,345 1136,331 800,311 464,331 320,345" fill="url(#h-surf)" stroke-width="1.4"/>
+<polygon points="1280,334 1308,338 1314,306 1334,306 1334,391 1280,391" fill="#fff" stroke-width="2.2"/>
+<polygon points="1392,316 1550,340 1550,435 1392,435" fill="#fff" stroke-width="1.4"/>
+<polygon points="1334,306 1392,306 1550,330 1550,340 1392,316 1334,316" fill="#fff" stroke-width="2"/>
+<rect x="1334" y="316" width="58" height="169" fill="url(#h-filt)" stroke-width="1.8"/>
+<circle cx="1363" cy="462" r="12" fill="#fff" stroke-width="2.2"/>
+<polygon points="320,334 292,338 286,306 266,306 266,391 320,391" fill="#fff" stroke-width="2.2"/>
+<polygon points="208,316 50,340 50,435 208,435" fill="#fff" stroke-width="1.4"/>
+<polygon points="266,306 208,306 50,330 50,340 208,316 266,316" fill="#fff" stroke-width="2"/>
+<rect x="208" y="316" width="58" height="169" fill="url(#h-filt)" stroke-width="1.8"/>
+<circle cx="237" cy="462" r="12" fill="#fff" stroke-width="2.2"/>
+<polyline points="320,334 464,320 800,300 1136,320 1280,334" fill="none" stroke-width="2.6"/>
+</g>
+<g id="centreline">
+<line x1="800" y1="116" x2="800" y2="423" stroke="#000" stroke-width="1.2" stroke-dasharray="26 6 5 6"/>
+<text x="800" y="108" font-size="24" font-weight="bold" text-anchor="middle">CL</text>
+</g>
+<g id="dimensions" stroke="#000" stroke-width="1" font-size="22" text-anchor="middle">
+<line x1="320" y1="326" x2="320" y2="72"/>
+<line x1="1280" y1="326" x2="1280" y2="72"/>
+<line x1="464" y1="312" x2="464" y2="142"/>
+<line x1="1136" y1="312" x2="1136" y2="142"/>
+<line x1="320" y1="150" x2="464" y2="150"/>
+<path d="M320,150 L334,146 L334,154 Z" fill="#000" stroke="none"/>
+<path d="M464,150 L450,154 L450,146 Z" fill="#000" stroke="none"/>
+<text x="392" y="141" stroke="none">1500</text>
+<line x1="464" y1="150" x2="800" y2="150"/>
+<path d="M464,150 L478,146 L478,154 Z" fill="#000" stroke="none"/>
+<path d="M800,150 L786,154 L786,146 Z" fill="#000" stroke="none"/>
+<text x="632" y="141" stroke="none">3500</text>
+<line x1="800" y1="150" x2="1136" y2="150"/>
+<path d="M800,150 L814,146 L814,154 Z" fill="#000" stroke="none"/>
+<path d="M1136,150 L1122,154 L1122,146 Z" fill="#000" stroke="none"/>
+<text x="968" y="141" stroke="none">3500</text>
+<line x1="1136" y1="150" x2="1280" y2="150"/>
+<path d="M1136,150 L1150,146 L1150,154 Z" fill="#000" stroke="none"/>
+<path d="M1280,150 L1266,154 L1266,146 Z" fill="#000" stroke="none"/>
+<text x="1208" y="141" stroke="none">1500</text>
+<line x1="320" y1="80" x2="1280" y2="80"/>
+<path d="M320,80 L334,76 L334,84 Z" fill="#000" stroke="none"/>
+<path d="M1280,80 L1266,84 L1266,76 Z" fill="#000" stroke="none"/>
+<text x="800" y="71" stroke="none">10000</text>
+</g>
+<g id="zones" font-size="22" text-anchor="middle">
+<text x="392" y="184">Sealed</text>
+<text x="392" y="210">shoulder</text>
+<text x="632" y="184">Traffic lane</text>
+<text x="968" y="184">Traffic lane</text>
+<text x="1208" y="184">Sealed</text>
+<text x="1208" y="210">shoulder</text>
+</g>
+<g id="crossfall" font-size="22" font-weight="bold" text-anchor="middle">
+<line x1="900" y1="290" x2="1040" y2="298.3" stroke="#000" stroke-width="1.6"/>
+<path d="M1040,298.3 L1023.7,302.3 L1024.3,292.3 Z" fill="#000" stroke="none"/>
+<text x="970" y="285.1">2.5%</text>
+<line x1="700" y1="290" x2="560" y2="298.3" stroke="#000" stroke-width="1.6"/>
+<path d="M560,298.3 L575.7,292.3 L576.3,302.3 Z" fill="#000" stroke="none"/>
+<text x="630" y="285.1">2.5%</text>
+<line x1="1166" y1="306.9" x2="1252" y2="315.3" stroke="#000" stroke-width="1.6"/>
+<path d="M1252,315.3 L1235.6,318.7 L1236.6,308.8 Z" fill="#000" stroke="none"/>
+<text x="1209" y="302.1">4%</text>
+<line x1="434" y1="306.9" x2="348" y2="315.3" stroke="#000" stroke-width="1.6"/>
+<path d="M348,315.3 L363.4,308.8 L364.4,318.7 Z" fill="#000" stroke="none"/>
+<text x="391" y="302.1">4%</text>
+</g>
+<g id="labels" font-size="22">
+<text x="1352" y="236">Kerb and channel</text>
+<line x1="1346" y1="229" x2="1322" y2="306" stroke="#000" stroke-width="1.1"/>
+<path d="M1322,306 L1322.3,291.4 L1330,293.8 Z" fill="#000" stroke="none"/>
+<text x="118" y="262" text-anchor="end">Verge</text>
+<line x1="124" y1="257" x2="150" y2="319.8" stroke="#000" stroke-width="1.1"/>
+<circle cx="150" cy="319.8" r="3.5" fill="#000"/>
+<text x="1318" y="506" text-anchor="end">Subsoil drain to EDCM 202b</text>
+<line x1="1324" y1="499" x2="1353.5" y2="471.5" stroke="#000" stroke-width="1.1"/>
+<path d="M1353.5,471.5 L1347.5,482.6 L1342,476.7 Z" fill="#000" stroke="none"/>
+</g>
+<g id="drawing-title" text-anchor="middle">
+<text x="800" y="540" font-size="30" font-weight="bold">TYPICAL CROSS-SECTION</text>
+<line x1="606.9" y1="548" x2="993.1" y2="548" stroke="#000" stroke-width="1.6"/>
+<text x="800" y="574" font-size="22">NTS</text>
+</g>
+</g>
+<g id="legend">
+<rect x="30" y="580" width="350" height="395" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<text x="50" y="618" font-size="26" font-weight="bold">Legend</text>
+<rect x="50" y="650" width="60" height="34" fill="url(#h-surf)" stroke="#000" stroke-width="1.2"/>
+<text x="126" y="673" font-size="20">Asphalt surfacing (PMA)</text>
+<rect x="50" y="724" width="60" height="34" fill="url(#h-base)" stroke="#000" stroke-width="1.2"/>
+<text x="126" y="747" font-size="20">Granular base</text>
+<rect x="50" y="798" width="60" height="34" fill="url(#h-sub)" stroke="#000" stroke-width="1.2"/>
+<text x="126" y="821" font-size="20">Subgrade</text>
+<rect x="50" y="872" width="60" height="34" fill="url(#h-filt)" stroke="#000" stroke-width="1.2"/>
+<circle cx="80" cy="889" r="10" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="126" y="895" font-size="20">Subsoil drain:</text>
+<text x="126" y="920" font-size="20">pipe in filter material</text>
+</g>
+<g id="notes" font-size="20">
+<rect x="400" y="580" width="650" height="395" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<text x="420" y="618" font-size="26" font-weight="bold">Notes</text>
+<text x="420" y="656">1.</text>
+<text x="450" y="656">All dimensions in millimetres unless noted.</text>
+<text x="420" y="688">2.</text>
+<text x="450" y="688">Crossfall 2.5% on traffic lanes and 4% on sealed</text>
+<text x="450" y="712">shoulders, falling outward.</text>
+<text x="420" y="744">3.</text>
+<text x="450" y="744">Subsoil drainage to EDCM 202b, back of kerb.</text>
+<text x="420" y="776">4.</text>
+<text x="450" y="776">Pavement design to the Austroads Guide to Pavement</text>
+<text x="450" y="800">Technology Part 2. Layer depths to the pavement design.</text>
+<text x="420" y="832">5.</text>
+<text x="450" y="832">Construction under live traffic conditions.</text>
+<text x="420" y="864">6.</text>
+<text x="450" y="864">Locate and verify all underground services by potholing</text>
+<text x="450" y="888">or a certified locator before excavation. Refer to asset</text>
+<text x="450" y="912">owners' responses for exclusion zones and permit</text>
+<text x="450" y="936">requirements.</text>
+</g>
+<g id="title-block" font-size="20">
+<rect x="1070" y="580" width="500" height="395" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<text x="1082" y="604" font-weight="bold">Rev</text>
+<text x="1138" y="604" font-weight="bold">Date</text>
+<text x="1250" y="604" font-weight="bold">Description</text>
+<line x1="1070" y1="614" x2="1570" y2="614" stroke="#000" stroke-width="1"/>
+<text x="1082" y="638">A</text>
+<text x="1138" y="638">Jul 2025</text>
+<text x="1250" y="638">Coursework issue (AutoCAD)</text>
+<line x1="1070" y1="648" x2="1570" y2="648" stroke="#000" stroke-width="1"/>
+<text x="1082" y="672">B</text>
+<text x="1138" y="672">Sep 2026</text>
+<text x="1250" y="672">Redrawn: title block, CL,</text>
+<text x="1250" y="696">crossfall and mm dims added,</text>
+<text x="1250" y="720">conduit removed, notes fixed.</text>
+<line x1="1070" y1="730" x2="1570" y2="730" stroke="#000" stroke-width="1.6"/>
+<line x1="1128" y1="580" x2="1128" y2="730" stroke="#000" stroke-width="1"/>
+<line x1="1240" y1="580" x2="1240" y2="730" stroke="#000" stroke-width="1"/>
+<text x="1082" y="754" fill="#444">Title</text>
+<text x="1082" y="784" font-size="26" font-weight="bold">Typical cross-section</text>
+<line x1="1070" y1="800" x2="1570" y2="800" stroke="#000" stroke-width="1"/>
+<text x="1082" y="824" fill="#444">Project</text>
+<text x="1082" y="852" font-size="22">Urban road pavement upgrade, Advanced</text>
+<text x="1082" y="877" font-size="22">Diploma coursework</text>
+<line x1="1070" y1="891" x2="1570" y2="891" stroke="#000" stroke-width="1"/>
+<text x="1082" y="917" fill="#444">Scale</text>
+<text x="1082" y="947" font-size="22" font-weight="bold">NTS</text>
+<line x1="1170" y1="891" x2="1170" y2="975" stroke="#000" stroke-width="1"/>
+<text x="1182" y="917" fill="#444">Dimensions</text>
+<text x="1182" y="947" font-size="22" font-weight="bold">mm</text>
+<line x1="1310" y1="891" x2="1310" y2="975" stroke="#000" stroke-width="1"/>
+<text x="1322" y="917" fill="#444">Rev</text>
+<text x="1322" y="947" font-size="22" font-weight="bold">B</text>
+<line x1="1390" y1="891" x2="1390" y2="975" stroke="#000" stroke-width="1"/>
+<text x="1402" y="917" fill="#444">Date</text>
+<text x="1402" y="947" font-size="22" font-weight="bold">Sep 2026</text>
+</g>
+</svg>

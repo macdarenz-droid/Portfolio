@@ -140,6 +140,11 @@ button{-webkit-tap-highlight-color:transparent}
   .nav ul{justify-content:flex-end;margin:0}
   .nav a.is-here::after{content:"";position:absolute;left:10px;right:10px;bottom:7px;height:1px;background:var(--ink)}
 }
+/* Six links: just above the menu breakpoint the theme button is icon-only (as on phones) so the nav stays on one row */
+@media (min-width:900px) and (max-width:1023.98px){
+  .theme-toggle{padding:0}
+  .tt-label{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+}
 @keyframes drop{from{transform:translateY(-6px);opacity:0}}
 
 /* ---------- Hero ---------- */
@@ -286,6 +291,65 @@ h4{font-weight:500;font-size:1.0625rem;line-height:1.35;letter-spacing:-.01em}
 .detail-b > p{max-width:44rem;color:var(--fg-2)}
 .detail-b > p.ph{font-size:.875rem;color:var(--fg-3)}
 
+/* ---------- Drawings: each sheet on a drafting mat; larger view in a dialog with JS ---------- */
+.plates{display:flex;flex-wrap:wrap;gap:16px}
+.shots{gap:12px}
+.shots .plate{flex:1 1 200px}
+.plate{--mp:12px;flex:1 1 100%;min-width:0;display:flex;flex-direction:column;border:1px solid var(--line);background:var(--paper)}
+/* Wide screens: the road section takes the full row; the other two share a row, sized so both images are the same height */
+@media (min-width:760px){
+  .plate{--mp:16px}
+  .plate-bridge{flex:1.9224 1 calc(var(--mp) * 2 + 4px)}
+  .plate-cad{flex:1.0996 1 calc(var(--mp) * 2 + 4px)}
+}
+.plate-view{position:relative;display:block;padding:var(--mp);color:var(--ink);text-decoration:none;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:24px 24px;background-position:-1px -1px}
+.js .plate-view{cursor:zoom-in}
+.plate-view:focus-visible{outline-offset:-3px;border-radius:0}
+.plate-view img{display:block;width:100%;height:auto;border:1px solid var(--line-2);background:#fff;transition:border-color .2s ease}
+.plate-cad .plate-view img{background:#212830}
+.plate-zoom{position:absolute;top:calc(var(--mp) + 8px);right:calc(var(--mp) + 8px);display:grid;place-items:center;width:32px;height:32px;border:1px solid var(--line-2);border-radius:6px;background:var(--bg);color:var(--ink);transition:background-color .15s ease,border-color .15s ease,color .15s ease}
+.plate-zoom svg,.viewer-close svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.plate-view:hover img,.plate-view:focus-visible img{border-color:var(--ink)}
+.plate-view:hover .plate-zoom,.plate-view:focus-visible .plate-zoom{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.plate-cap{flex:1 0 auto;display:grid;align-content:start;gap:6px;padding:14px 16px 16px;border-top:1px solid var(--line)}
+.plate-meta{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:2px 16px}
+.plate-tool{font:500 .75rem/1.4 var(--mono);letter-spacing:.04em;color:var(--ink)}
+.plate-text{max-width:48rem;font-size:.9375rem;line-height:1.55;color:var(--fg-2)}
+/* The dialog (built by main.js): caption on top, drawing fitted to the rest of the screen */
+html.is-locked{overflow:hidden;scrollbar-gutter:stable}
+.viewer{width:min(1680px,calc(100% - 24px));height:calc(100% - 24px);height:calc(100dvh - 24px);max-width:none;max-height:none;margin:auto;padding:0;border:1px solid var(--line-2);border-radius:0;background:var(--paper-s);color:var(--ink);overflow:hidden;overscroll-behavior:contain}
+.viewer::backdrop{background:rgba(3,6,10,.72)}
+.viewer-box{display:grid;grid-template-areas:"head" "stage";grid-template-rows:auto minmax(0,1fr);grid-template-columns:minmax(0,1fr);height:100%}
+.viewer-head{grid-area:head;display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"meta close" "cap close";align-items:start;gap:4px 16px;padding:12px 12px 12px 16px;border-bottom:1px solid var(--line)}
+.viewer-meta{grid-area:meta;justify-content:flex-start;padding-top:2px}
+.viewer-cap{grid-area:cap;max-width:64rem;font-size:.9375rem;line-height:1.5;color:var(--ink)}
+.viewer-close{grid-area:close;padding:0 14px}
+@media (max-width:599.98px){.viewer-head{grid-template-areas:"meta close" "cap cap";row-gap:8px}.viewer-meta{align-self:center;padding-top:0}}
+.viewer-stage{grid-area:stage;position:relative;min-height:0;background:#fff}
+.viewer.is-cad .viewer-stage{background:#212830}
+.viewer-img{position:absolute;inset:12px;display:block;width:calc(100% - 24px);height:calc(100% - 24px);margin:auto;object-fit:contain}
+/* Portrait screens: the drawing is limited by width, so the dialog wraps it instead of leaving an empty stage */
+@media (max-aspect-ratio:1/1){
+  .viewer{height:fit-content;max-height:calc(100% - 24px);max-height:calc(100dvh - 24px);overflow-y:auto}
+  .viewer-box{height:auto}
+  .viewer-stage{padding:12px}
+  .viewer-img{position:static;width:100%;height:auto;margin-inline:auto}
+}
+@media (max-aspect-ratio:1/1) and (max-width:599.98px){
+  .viewer{width:100%;border-inline:0}
+  .viewer-stage{padding:0}
+}
+/* Short screens too narrow for the side caption (such as 400% zoom): keep room for the drawing and let the dialog scroll */
+@media (max-height:559.98px) and (min-aspect-ratio:1/1) and (max-aspect-ratio:4/3){
+  .viewer{overflow-y:auto}
+  .viewer-box{height:auto;min-height:100%;grid-template-rows:auto minmax(9rem,1fr)}
+}
+@media (max-height:559.98px) and (min-aspect-ratio:4/3){
+  .viewer-box{height:100%;grid-template-areas:"stage head";grid-template-rows:minmax(0,1fr);grid-template-columns:minmax(0,1fr) minmax(200px,30%)}
+  .viewer-head{grid-template-columns:minmax(0,1fr);grid-template-areas:"close" "meta" "cap";align-content:start;overflow-y:auto;border-bottom:0;border-left:1px solid var(--line)}
+  .viewer-close{justify-self:end}
+}
+
 /* ---------- How I work: 6 steps (tabs with JS) ---------- */
 .ls-panel{display:grid;gap:12px 40px;padding-block:24px;border-top:1px solid var(--line)}
 .ls-panel:first-child{border-top:0;padding-top:0}
@@ -374,6 +438,7 @@ h4{font-weight:500;font-size:1.0625rem;line-height:1.35;letter-spacing:-.01em}
 @keyframes plot{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
 @keyframes mk{from{transform:rotate(-90deg) scale(.2);opacity:0}}
 @keyframes tagin{from{transform:scale(.4);opacity:0}}
+@keyframes pop{from{opacity:0;transform:translate3d(0,10px,0) scale(.985)}}
 @media (prefers-reduced-motion:no-preference){
   .js .bgfx canvas{animation:fade 1.8s ease backwards}
   .js .hero-copy > *{animation:rise .9s var(--ease) backwards}
@@ -395,6 +460,9 @@ h4{font-weight:500;font-size:1.0625rem;line-height:1.35;letter-spacing:-.01em}
   .js .band.in h2{animation-delay:.05s}
   .js .band.in .sec-intro{animation-delay:.1s}
   .js .band.in .sec-body{animation-delay:.15s}
+  /* Drawing viewer opens with a short rise and fade */
+  .viewer[open]{animation:pop .34s var(--ease)}
+  .viewer[open]::backdrop{animation:fade .34s ease}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -403,7 +471,7 @@ h4{font-weight:500;font-size:1.0625rem;line-height:1.35;letter-spacing:-.01em}
 ::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}
 
 @media print{
-  .bgfx,.xh,.snap,.lsec,.theme-toggle,.nav-toggle,.car-bar,.copy{display:none!important}
+  .bgfx,.xh,.snap,.lsec,.theme-toggle,.nav-toggle,.car-bar,.copy,.plate-zoom,.viewer{display:none!important}
   html,body,.sheet{background:#fff}
   .site-header{position:static}
   .car-track{display:grid;overflow:visible;margin:0;padding:0}
