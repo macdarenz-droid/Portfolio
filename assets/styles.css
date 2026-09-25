@@ -306,13 +306,18 @@ h4{font-weight:500;font-size:1.0625rem;line-height:1.35;letter-spacing:-.01em}
 .detail-bg .img-hall-2 i{background-image:url(photos/stock-renovation-2.jpg)}
 .detail-bg .img-sub-1 i{background-image:url(photos/subdivision-site-1.jpg)}
 .detail-bg .img-sub-2 i{background-image:url(photos/subdivision-site-2.jpg)}
-.detail-bg .img-cw-1 i{background-image:url(drawings/truss-bridge-revit.png)}
-.detail-bg .img-cw-2 i{background-image:url(drawings/footing-3d.png)}
+.detail-bg .img-road i{background-image:url(photos/topic-road-geometry.jpg)}
+.detail-bg .img-earth i{background-image:url(photos/topic-earthworks.jpg)}
+.detail-bg .img-pave i{background-image:url(photos/topic-pavement.jpg)}
+.detail-bg .img-drain i{background-image:url(photos/topic-drainage.jpg)}
+/* Four-photo cycle, one per main topic: each layer shows for a quarter of the loop over the first photo. */
+.detail-bg .bg-q{opacity:0;animation:bgq 32s ease-in-out infinite}
+.detail-bg .q2{animation-delay:8s}.detail-bg .q3{animation-delay:16s}.detail-bg .q4{animation-delay:24s}
+@keyframes bgq{0%{opacity:0}4%,25%{opacity:1}29%,100%{opacity:0}}
 .detail-bg .bg-2{opacity:0;animation:bgx 18s ease-in-out infinite}
 .detail-bg::after{content:"";position:absolute;inset:0;background:var(--scrim)}
-.motion-off .detail-bg .bg-2{animation-play-state:paused}
+.motion-off .detail-bg .bg-2,.motion-off .detail-bg .bg-q{animation-play-state:paused}
 @keyframes bgx{0%,40%{opacity:0}50%,90%{opacity:1}100%{opacity:0}}
-.detail-b > p.bg-note{font-size:.8125rem;color:var(--fg-3)}
 .plate{--mp:12px;flex:1 1 100%;min-width:0;display:flex;flex-direction:column;border:1px solid var(--line);background:var(--paper)}
 /* Wide screens: the road section takes the full row; the other two share a row, sized so both images are the same height */
 @media (min-width:760px){
@@ -500,4 +505,4 @@ html.is-locked{overflow:hidden;scrollbar-gutter:stable}
 .note a{display:inline-block;padding-block:4px;color:var(--ink);text-underline-offset:3px}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .detail-photo{--scrim:rgba(5,5,6,.68);--fg-2:#d6d6d6;--fg-3:#cfcfcf}}
 :root[data-theme="dark"] .detail-photo{--scrim:rgba(5,5,6,.68);--fg-2:#d6d6d6;--fg-3:#cfcfcf}
-@media (prefers-reduced-motion:reduce){.detail-bg .bg-2{animation:none}}
+@media (prefers-reduced-motion:reduce){.detail-bg .bg-2,.detail-bg .bg-q{animation:none}}
