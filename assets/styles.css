@@ -361,7 +361,6 @@ h4{font-weight:500;font-size:1.0625rem;line-height:1.35;letter-spacing:-.01em}
 .contact-grid > div{padding:20px;display:grid;gap:10px;align-content:start;min-width:0;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
 .contact-grid .big code{font-size:clamp(1rem,.9rem + .6vw,1.25rem)}
 .contact-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.ph-pdf{margin-top:24px;min-height:88px}
 .endstrip{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 24px;padding-block:20px;border-top:1px solid var(--line);margin-top:48px}
 .motion-toggle{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 12px;margin-inline:-12px;border:0;border-radius:6px;background:none;color:var(--fg-2);font:500 .75rem/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:background-color .15s ease,color .15s ease}
 .motion-toggle:hover{background:var(--bg-2);color:var(--ink)}
@@ -434,3 +433,6 @@ h4{font-weight:500;font-size:1.0625rem;line-height:1.35;letter-spacing:-.01em}
   .car-track{display:grid;overflow:visible;margin:0;padding:0}
   .is-tabs .ls-panel[hidden]{display:grid!important}
 }
+.caps > li.wide{grid-column:1/-1}
+.resume-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin-top:24px}
+.note a{display:inline-block;padding-block:4px;color:var(--ink);text-underline-offset:3px}
